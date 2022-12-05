@@ -20,4 +20,9 @@ def nearest_zero(array: str) -> str:
     result = list(map(str, result))
     return ' '.join(result)
 
+print(nearest_zero('0 1 4 9 0'))
+# 0 1 2 1 0
 print(nearest_zero('0 7 9 4 8 20'))
+# 0 1 2 3 4 5
+print(nearest_zero('1 5 0 7 9 4 8 20 0 2 3 6 10 0 11 12'))
+# 2 1 0 1 2 3 2 1 0 1 2 2 1 0 1 2
