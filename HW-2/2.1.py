@@ -1,3 +1,7 @@
+from pydantic import validate_arguments
+
+
+@validate_arguments
 def psp(n: int) -> str:
     """
     Описание:
@@ -35,3 +39,4 @@ def psp(n: int) -> str:
         result += sequence + '\n'
         sequence = next_sequence(sequence)
     return result.rstrip()
+

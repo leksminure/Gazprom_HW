@@ -1,6 +1,8 @@
 from functools import reduce
+from pydantic import validate_arguments
 
 
+@validate_arguments
 def largest_number(n: int, numbers: str) -> str:
     """
     Описание:
@@ -17,7 +19,7 @@ def largest_number(n: int, numbers: str) -> str:
     ----------
     result: строка, являющаяся конкатенацией и максимальным числом при данных входныхых числах
     """
-    def sum_of_digits(number):
+    def sum_of_digits(number: int):
         """
         Описание:
         Функция принимает на вход число, возвращает сумму его отдельно взятых цифр
